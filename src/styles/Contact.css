@@ -1,0 +1,115 @@
+.contact {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact .leftSide {
+  height: 100%;
+  flex: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact .rightSide {
+  height: 100%;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .rightSide h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  margin-left: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 30px;
+}
+
+form input {
+  height: 40px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+}
+
+form textarea {
+  margin-top: 15px;
+  height: 70px;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: 500;
+  color: rgb(146, 142, 142);
+  font-family: "Montserrat", sans-serif;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+form label {
+  margin-top: 15px;
+  color: rgb(39, 37, 37);
+}
+
+form button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  margin-top: 40px;
+  width: 140px;
+  height: 40px;
+  border: none;
+  background-color: #121619;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+form button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  z-index: -1;
+  background-color: #298edb;
+  transition: 1s;
+}
+
+form button:hover::before {
+  transform: translateX(0);
+}
+
+@media only screen and (max-width: 650px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .rightSide h1 {
+    text-align: center;
+  }
+}

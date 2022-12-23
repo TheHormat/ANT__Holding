@@ -1,0 +1,76 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.card-txt {
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-txt h1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    padding: 50px;
+}
+
+.card-container button {
+    color: white;
+    background-color: black;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.card-container button::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: -1;
+    background-color: #298edb;
+    transition: 1s;
+}
+
+.card-container button:hover::before {
+    transform: translateX(0);
+}
+
+.card-menu #btn-click {
+    display: none;
+}
+
+.card-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width:650px) {
+    .card-txt h1 {
+        font-size: 40px;
+    }
+
+}

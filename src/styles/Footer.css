@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #2d89cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.socialMedia svg {
+  color: white;
+  margin: 20px;
+  font-size: 70px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.socialMedia svg:hover {
+  color: black;
+}
+
+.footer p {
+  color: white;
+}
+
+@media only screen and (max-width: 650px) {
+  .footer {
+    height: 60vh;
+  }
+
+  .socialMedia svg {
+    font-size: 50px;
+  }
+
+}

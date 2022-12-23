@@ -1,0 +1,153 @@
+.navbar {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #2d89cf;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ---------------------------- */
+
+.navbar .leftSide {
+  flex: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.navbar .leftSide img {
+  width: 90px;
+  align-self: baseline;
+  margin-top: 10px;
+}
+
+.navbar .rightSide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .rightSide svg {
+  font-size: 40px;
+}
+
+.navbar #open {
+  padding-left: 0px;
+}
+
+.navbar #open img {
+  display: none;
+}
+
+.navbar #close img {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
+  }
+
+  .navbar .leftSide {
+    padding-left: 20px;
+    justify-content: center;
+  }
+
+  .navbar .leftSide a {
+    font-size: 11px;
+    padding-left: 5px;
+    flex-wrap: wrap;
+  }
+
+  .hiddenLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+  }
+
+  .availableLinks {
+    height: 100% !important;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar .rightSide a {
+    display: none;
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding: 10px 10px;
+  }
+
+  .navbar .rightSide button {
+    display: inherit;
+  }
+
+  .navbar .leftSide a {
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+
+  .navbar a:hover {
+    border: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+}
